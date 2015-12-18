@@ -1,0 +1,85 @@
+<!--
+ 	Write the HTML and CSS for the example page at
+ 	https://www.coursera.org/learn/html-css-javascript/peer/biy2Z/dating-web-site-assessment
+-->
+<!DOCTYPE html
+<html>
+	<head>
+		<style type="text/css">
+		div {
+
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Please Enter Your Details For Our Dating Website!</h1>
+		<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+
+			<fieldset>
+				<legend>Your Face</legend>
+
+				<label for="pic">Your Image:</label>
+				<input type="file" id="pic" name="pic" required> <br>
+
+				<label for="preview">Image Preview:</label>
+				<img id="preview" src="">
+			</fieldset>
+
+			<fieldset>
+				<legend>Your General Details</legend>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required> <br>
+
+				<label for="gender">Gender:</label>
+				<input type="radio" id="gender" name="gender" value="Male" required>Male
+				<input type="radio" id="gender" name="gender" value="Female" required>Female <br>
+
+				<label for="age">Age:</label>
+				<input type="number" id="age" name="age" value="18" required> <br>
+
+				<label for="dob">Date of Birth:</label>
+				<input type="date" id="dob" name="dob" placeholder="dd/mm/yyyy" required> <br>
+
+				<label for="color">Favorite Color:</label>
+				<input type="color" id="color" name="color"> <br>
+
+				<label for="country">Which Country:</label>
+				<select id="country" name="country">
+					<option value="no selection">No Selection</option>
+					<option value="bz">Belize</option>
+					<option value="cr">Costa Rica</option>
+					<option value="dr">Dominican Republic</option>
+					<option value="mx">Mexico</option>
+					<option value="nr">Nicaragua</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<legend>Your Indicators</legend>
+				<label for="height">Height:</label>
+				Short<input type="range" id="height" name="height" min="0" max="100" step="1" value="50">Tall <br>
+
+				<label for=salary"">Salary:</label>
+				Poor<input type="range" id="salary" name="salary" min="0" max="100" step="1" value="50">Rich
+			</fieldset>
+
+			<fieldset>
+				<legend>Your Contact Information</legend>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required> <br>
+
+				<label for="telephone">Mobile:</label>
+				<input type="tel" id="telephone" name="telephone"> <br>
+
+				<label for="address">Address:</label>
+				<textarea></textarea id="address" name="address"> <br>
+
+				<label for="contact">Method to contact you:</label>
+				<input type="checkbox" id="contact" name="contact" value="email">Email
+				<input type="checkbox" id="contact" name="contact" value="whatsapp">Whatsapp
+				<input type="checkbox" id="contact" name="contact" value="inapp">In-app chat
+			</fieldset>
+			<input type="submit">
+		</form>
+	</body>
+</html>
