@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Javascript Guessing Game</title>
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+		// declare globals
+		var colors = [];
+		var targetColor;	// string color name
+		var myGuess;		// string color name
+		var isMatch = false; // the victory condition
+		var guessCount = 0;	// the number of previous guesses
+
+		// declare function do_game()
+		function do_game() {
+
+			// generate color list
+			colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"].sort();
+
+			// generate random int [0,7)
+			num = Math.floor(Math.random()*7);
+
+			//assign random color
+			targetColor = colors[num];
+
+			alert("The target color is " + targetColor)// @DEBUG
+
+			// prompt for input
+			do {
+				 myGuess = String(prompt("I am thinking of one of these colors:\n\n" + colors.join(", ") + "\n\nWhat color am I thinking of? (case matters!)"));
+				 guessCount++;
+
+				 isMatch = check_guess(targetColor, myGuess)
+			} while (isMatch != true) // while guess is false
+
+			//alert("You got it! \nYour guess: " + myGuess + "\nThe color: " + targetColor); //@DEBUG
+		}
+
+		// declare function check_guess(color, guess)
+		function check_guess(color, guess) {
+			
+			if (colors.indexOf(myGuess) == -1) { // if guess is not anywhere in the array
+				alert("Sorry. \n\nI don't recognize that color. \n\nChoose one of: " + colors.join(", ") + ". \n\n")
+			}
+			else if (guess < color) {
+				alert("That's not it :( \n\nYour color is alphabetically lower than mine.\n\n")
+			}
+			else if (guess > color) {
+				alert("That's not it :( \n\nYour color is alphabetically higher than mine.\n\n")
+			}
+			else if (guess == color) { // if guess is correct
+				myBody=document.getElementsByTagName("body")[0];
+				myBody.style.background=targetColor;
+
+				alert("You are right! The color was " + color + ". You guessed it in " + guessCount + " guesses! \n\n");
+				return true;
+			}
+			//else
+				//return false
+		}
+	</script>
+</head>
+<body onload="do_game()">
+
+</body>
+</html>

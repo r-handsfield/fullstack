@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Javascript Guessing Game</title>
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+		// declare globals
+		var colors = [];
+		var targetColor;	// string color name
+		var myGuess;		// string color name
+
+		// declare function do_game()
+		function do_game() {
+
+			// generate color list
+			colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"].sort();
+
+			// generate random int [0,7)
+			num = Math.floor(Math.random()*7);
+
+			//assign random color
+			targetColor = colors[num];
+
+			alert("The target color is " + targetColor)// @DEBUG
+
+			// prompt for input
+			do {
+				 myGuess = String(prompt("I am thinking of one of these colors:\n\n" + colors.join(", ") + "\n\nWhat color am I thinking of? (case matters!)"));
+			} while (myGuess != targetColor) // while guess is false
+
+			alert("You got it! \nYour guess: " + myGuess + "\nThe color: " + targetColor);
+		}
+	</script>
+</head>
+<body onload="do_game()">
+
+</body>
+</html>
