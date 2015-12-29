@@ -5,8 +5,27 @@
 	<meta charset="utf-8"/>
 	<title></title>
 	<style type="text/css">
+		div{
+			position: absolute;
+			/*display: inline-block;*/
+			height: 500px;
+			width: 500px;
+			padding: 5px;
+		}
+		#leftSide{
+			border-style: solid;
+    		border-color: red;
+		}
 		#rightSide{
 			/* border on left side of div*/
+			left: 520px;
+			border-style: solid;
+    		border-color: black;
+    		/*border-left: 4px solid black;*/
+		}
+
+		img{
+			position: absolute;
 		}
 	</style>
 	
@@ -14,10 +33,17 @@
 		// create N faces on leftSide
 		// clone all N faces on rightSide
 		// delete the last child on rightSide
+		
 		// bind onClick handler to last child on leftSide
+			// onEvent: increase N by 5, reload page - repeat all
+
+		// bind onClick handler to <body> (all the other faces)
+			// onEvent: alert(FAILURE), remove both handlers
 	</script>
 </head>
 <body>
+	<h1>Matching Game</h1>
+	<p>Click on the extra smiling face on the left</p>
    	<div id="leftSide"></div>
 
     <div id="rightSide"></div>
