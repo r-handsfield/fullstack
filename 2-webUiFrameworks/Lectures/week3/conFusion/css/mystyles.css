@@ -52,6 +52,8 @@ body {
     background: #1A237E;
 }
 
+a {}
+
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
@@ -69,24 +71,9 @@ body {
     color:#000000;
 }
 
+/* Custom Styles for c2w2a1 */
 
-/* Custom Styles for c2w3l1e1 Exercise */
-
-/*************************** Exercise 1 - Mod 1 ***************************/
-.tab-content {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-}
-
-/*************************** Exercise 1 - Mod 2 ***************************/
-.affix {
-    top:100px;
-}
-
-
-
+/*************************** Assignment c2w2a1 ***************************/
 
 
 
