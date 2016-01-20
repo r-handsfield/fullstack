@@ -1,1 +1,0 @@
-"use strict";define("bundles/CMLConverter/CMLVariableNames",["require","exports","module"],function(require,exports,module){module.exports={NAME:"NAME",USER_ID:"USER_ID"}});

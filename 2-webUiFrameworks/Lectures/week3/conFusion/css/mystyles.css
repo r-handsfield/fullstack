@@ -52,8 +52,6 @@ body {
     background: #1A237E;
 }
 
-a {}
-
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
@@ -71,9 +69,6 @@ a {}
     color:#000000;
 }
 
-/* Custom Styles for c2w2a1 */
-
-/*************************** Assignment c2w2a1 ***************************/
 
 
 
