@@ -69,11 +69,12 @@ body {
     color:#000000;
 }
 
+/* Custom Styles for c2w3l1e1 */
 
-
-
-
-
-
-
-
+/*************************** Exercise 1 - Mod 1 ***************************/
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
