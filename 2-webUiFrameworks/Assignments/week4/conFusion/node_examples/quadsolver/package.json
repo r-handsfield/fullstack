@@ -1,0 +1,14 @@
+{
+  "name": "myquadsolver",
+  "version": "1.0.0",
+  "description": "Solves Quadratic equations",
+  "main": "bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RH",
+  "license": "MIT",
+  "dependencies": {
+    "prompt": "^0.2.14"
+  }
+}
