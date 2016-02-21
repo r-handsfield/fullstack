@@ -49,7 +49,7 @@
                         <ul class="media-list tab-pane fade in active">
                             <!-- This is the template for the menu items -->
                             <!-- It will be looped over (??) by ng-repeat -->
-                            <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.iltText">
+                            <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
                                 <div class="media-left media-middle">
                                     <a href="#"><img class="media-object img-thumbnail" ng-src={{dish.image}} alt="Uthapizza" /></a>
                                 </div>
