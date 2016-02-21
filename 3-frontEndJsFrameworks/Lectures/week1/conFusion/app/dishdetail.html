@@ -46,7 +46,13 @@
                 </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
-                <p>Put the comments here</p>
+                <!-- Task 2-1: Use the Bootstrap blockquote class to format the comments. The author and the date information should be in the footer of the blockquote -->
+                <!--<p>Put the comments here</p>-->
+                <ul>
+                    <li ng-repeat="comment in dishCtrl.dish.comments">
+                        <blockquote>{{comment}}</blockquote>
+                    </li>
+                </ul>
             </div>
         </div>
 
