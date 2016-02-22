@@ -52,7 +52,8 @@
                 <!-- Task 3-1: Set up an input field that enables the user to type in their ordering criteria: author, date and rating. These could be prefixed with a '-' sign to indicate reverse ordering. -->
                 <span class="text-muted">Sort by: <input type="text" ng-model="searchString"/></span>
                 <ul>
-                    <li class="media" ng-repeat="comment in dishCtrl.dish.comments">
+                    <!-- Task 3-2: Set up the orderBy filter on the comments so that the comments will be ordered as per the user's specification. -->
+                    <li class="media" ng-repeat="comment in dishCtrl.dish.comments | orderBy: searchString">
                         <blockquote>
                             <p>{{comment.rating}} Stars</p>
                             <p>{{comment.comment}}</p>
