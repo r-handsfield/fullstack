@@ -46,11 +46,12 @@
                 </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
-                <!-- Task 2-1: Use the Bootstrap blockquote class to format the comments. The author and the date information should be in the footer of the blockquote -->
+                
                 <!--<p>Put the comments here</p>-->
+                <!-- Task 2-1: Use the Bootstrap blockquote class to format the comments. The author and the date information should be in the footer of the blockquote -->
                 <h4>Customer Comments</h4>
                 <!-- Task 3-1: Set up an input field that enables the user to type in their ordering criteria: author, date and rating. These could be prefixed with a '-' sign to indicate reverse ordering. -->
-                <span class="text-muted">Sort by: <input type="text" ng-model="searchString"/></span>
+                <span class="text-muted" style="font-size: small;">Sort by: <input type="text" ng-model="searchString"/></span>
                 <ul>
                     <!-- Task 3-2: Set up the orderBy filter on the comments so that the comments will be ordered as per the user's specification. -->
                     <li class="media" ng-repeat="comment in dishCtrl.dish.comments | orderBy: searchString">
@@ -62,10 +63,8 @@
                         </blockquote>
                     </li>
                 </ul>
-                
             </div>
         </div>
-
     </div>
 
     <script src="../bower_components/angular/angular.min.js"></script>
