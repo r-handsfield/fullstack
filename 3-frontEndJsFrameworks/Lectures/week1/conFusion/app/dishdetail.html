@@ -50,7 +50,11 @@
                 <!--<p>Put the comments here</p>-->
                 <ul>
                     <li class="media" ng-repeat="comment in dishCtrl.dish.comments">
-                        <blockquote>{{comment}}</blockquote>
+                        <blockquote>
+                            <p>{{comment.rating}} Stars</p>
+                            <p>{{comment.comment}}</p>
+                            <footer>{{comment.author}}, {{comment.date}}</footer>
+                        </blockquote>
                     </li>
                 </ul>
             </div>
