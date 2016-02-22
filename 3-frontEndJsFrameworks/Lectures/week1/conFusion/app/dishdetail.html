@@ -49,6 +49,8 @@
                 <!-- Task 2-1: Use the Bootstrap blockquote class to format the comments. The author and the date information should be in the footer of the blockquote -->
                 <!--<p>Put the comments here</p>-->
                 <h4>Customer Comments</h4>
+                <!-- Task 3-1: Set up an input field that enables the user to type in their ordering criteria: author, date and rating. These could be prefixed with a '-' sign to indicate reverse ordering. -->
+                <span class="text-muted">Sort by: <input type="text" ng-model="searchString"/></span>
                 <ul>
                     <li class="media" ng-repeat="comment in dishCtrl.dish.comments">
                         <blockquote>
