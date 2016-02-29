@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
     
     // Automatically load required grunt tasks
-    require('jit-grunt')(grunt);
+    require('jit-grunt')(grunt, {useminPrepare: 'grunt-usemin'});
     
     // Project configuration.
     grunt.initConfig({
@@ -60,9 +60,73 @@ module.exports = function (grunt) {
             build: {
                 src: ['dist/']
             }
+        },
+        
+        // Tasks for preparing/readying/optimizing the dist folder
+        useminPrepare: {
+            html: 'app/menu.html',
+            options: {
+                dest: 'dist'
+            }
+        },
+        
+        concat: {
+            options: {
+                separator: ';'
+            },
+            // dist configuration provided by useminPrepare
+            dist: {}
+        },
+        
+        uglify: {
+            // dist configuration provided by useminPrepare
+            dist: {}
+        },
+        
+        cssmin: {
+//            dist: {}
+        },
+        
+        filerev: {
+            options: {
+                encoding: 'utf8',
+                algorithm: 'md5',
+                length: 20
+            },
+            release: {
+                // filerev:release md5 hashes all assets (img, js, css) in dist dir
+                files: [{
+                    src:['dist/scripts/*.js', 'dist/styles/*.css']
+                }]
+            }
+        },
+        
+        // Usemin
+        // Replaces all assets with their revved version in html and css files.
+        // options.assetDirs contains the directories for finding the assets
+        // according to their relative paths
+        usemin: {
+            html: ['dist/*.html'],
+            css: ['dist/styles/*.css'],
+            options: {
+                assetsdirs: ['dist', 'dist/styles']
+            }
         }
     });
     
-    grunt.registerTask('build', ['clean', 'jshint', 'copy']);
+    grunt.registerTask('build', 
+                        [
+                            'clean', 
+                            'jshint', 
+                            'useminPrepare',
+                            'concat',
+                            'cssmin',
+                            'uglify',
+                            'copy',
+                            'filerev',
+                            'usemin'
+                        ]
+                      );
+              
     grunt.registerTask('default', ['build']);
 };
